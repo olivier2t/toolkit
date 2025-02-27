@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add --update --no-cache curl ca-certificates bash git curl tar sed gawk jq yq \
+RUN apk add --update --no-cache curl ca-certificates bash git curl tar sed gawk jq yq && \
     curl -sL https://get.helm.sh/helm-v3.17.1-linux-amd64.tar.gz | tar -xvz && \
     mv linux-amd64/helm /usr/bin/helm && \
     chmod +x /usr/bin/helm && \
